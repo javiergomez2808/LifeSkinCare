@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thank You | Serenity Spa</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container" style="padding: 80px 0;">
+    <div class="card" style="padding: 22px;">
+      <h1>Booking Request Received ✅</h1>
+      <p class="muted">We’ll confirm your appointment shortly by email or phone.</p>
+      <a class="btn" href="{{ url_for('home') }}">Back to Home</a>
+    </div>
+  </div>
+</body>
+</html>
