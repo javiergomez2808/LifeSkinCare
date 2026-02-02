@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <linkl rel="icon" type="image/jpg" href="./images/life skin care color.jpg">
-    <title>Life Skin Care Irapuato</title>
-    <meta name="description" content="Life Skin Care Irapuato Spa ofrece masajes, faciales, tratamientos corporales y paquetes en un ambiente en calma y moderno." />
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- FIX: link tag + rel -->
+  <link rel="icon" type="image/jpg" href="./images/life skin care color.jpg" />
+
+  <title>Life Skin Care Irapuato</title>
+  <meta name="description" content="Life Skin Care Irapuato ofrece masajes, faciales, tratamientos corporales y paquetes en un ambiente en calma y moderno." />
+
+  <!-- FIX: close tag properly -->
+  <link rel="stylesheet" href="../static/styles.css" />
+</head>
 
 <body>
   <!-- Top Bar -->
   <header class="topbar">
     <div class="container topbar__inner">
-      <a class="brand" href="#home" aria-label="Serenity Spa Home">
-        <span class="brand__mark">Spa</span>
-        <span class="brand__text">Life Skin Scare</span>
+      <a class="brand" href="#home" aria-label="Life Skin Care Irapuato Home">
+        <span class="brand__text">Life Skin Care Irapuato</span>
       </a>
 
       <nav class="nav" aria-label="Primary navigation">
-        <a href="#services">Services</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#about">About</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact" class="btn btn--sm">Book</a>
+        <a href="#services">Servicios</a>
+        <a href="#about">Acerca de Nosotros</a>
+        <a href="#contact" class="btn btn--sm">Reserva</a>
       </nav>
     </div>
   </header>
@@ -32,47 +35,48 @@
     <section class="hero">
       <div class="container hero__grid">
         <div class="hero__content">
-          <p class="pill">Relax • Renew • Restore</p>
-          <h1>Your quiet place for wellness.</h1>
+          <p class="pill">Amamos Cuidar Tu Piel</p>
+          <h1>Life Skin Care Irapuato</h1>
           <p class="lead">
-            Massage therapy, facials, body treatments, and spa packages designed to help you
-            slow down and feel your best.
+           Masajes terapéuticos, tratamientos faciales, tratamientos corporales y paquetes de spa diseñados para ayudarte a relajarte y sentirte de maravilla.
           </p>
 
           <div class="hero__actions">
-            <a class="btn" href="#contact">Book an Appointment</a>
-            <a class="btn btn--ghost" href="#services">Explore Services</a>
+            <a class="btn" href="#contact">Reserva con nosotros</a>
+            <a class="btn btn--ghost" href="#services">Explora nuestros Servicios</a>
           </div>
 
           <div class="hero__stats" role="list">
             <div class="stat" role="listitem">
               <span class="stat__num">4.9★</span>
-              <span class="stat__label">Avg. Rating</span>
+              <span class="stat__label">Califiación</span>
             </div>
             <div class="stat" role="listitem">
-              <span class="stat__num">10+</span>
-              <span class="stat__label">Therapists</span>
+              <span class="stat__num">5</span>
+              <span class="stat__label">Especialistas</span>
             </div>
             <div class="stat" role="listitem">
-              <span class="stat__num">7</span>
-              <span class="stat__label">Days Open</span>
+              <span class="stat__num">6</span>
+              <span class="stat__label">Días Abiertos</span>
             </div>
           </div>
         </div>
 
         <div class="hero__card" aria-label="Spa highlights">
           <div class="card">
-            <h3>Today’s Highlights</h3>
+            <h3>Recomendaciones del Día</h3>
             <ul class="checklist">
-              <li>Aromatherapy Massage</li>
-              <li>Hydrating Facial</li>
-              <li>Hot Stone Therapy</li>
-              <li>Couples Suite Available</li>
+              <li>Example</li>
+              <li>Example</li>
+              <li>Example</li>
+              <li>Example</li>
             </ul>
             <div class="divider"></div>
             <p class="muted">
-              Open: Mon–Sun • 9:00 AM – 8:00 PM<br />
-              Phone: (555) 123-4567
+              Horarios:<br>
+               Lunes–Viernes • 10:00 AM – 8:00 PM<br />
+              Sábados • 10:00 AM - 6:00 PM<br>
+              Email: lifeskincare@outlook.com
             </p>
           </div>
         </div>
@@ -84,109 +88,53 @@
     <section id="services" class="section">
       <div class="container">
         <div class="section__head">
-          <h2>Services</h2>
-          <p class="muted">Curated treatments to help you feel balanced, refreshed, and restored.</p>
+          <h2>Servicios</h2>
+          <p class="muted">Tratamientos cuidadosamente seleccionados para ayudarte a sentirte equilibrado, revitalizado y renovado.</p>
         </div>
 
         <div class="grid grid--3">
           <article class="service">
             <div class="service__icon" aria-hidden="true">🌿</div>
-            <h3>Masajser</h3>
-            <p>Swedish, deep tissue, hot stone, and aromatherapy sessions tailored to your needs.</p>
-            <a class="link" href="#pricing">View pricing →</a>
+            <h3>Masajes</h3>
+            <p>Examples.</p>
+            <a class="link" href="../Servicios/Masajes.html">Ver más →</a>
           </article>
 
           <article class="service">
             <div class="service__icon" aria-hidden="true">✨</div>
-            <h3>Facials</h3>
-            <p>Hydrating, brightening, and clarifying facials using gentle, skin-loving products.</p>
-            <a class="link" href="#pricing">View pricing →</a>
+            <h3>Faciales</h3>
+            <p>Ejemplos.</p>
+            <a class="link" href="../Servicios/Faciales.html">Ver más →</a>
           </article>
 
           <article class="service">
             <div class="service__icon" aria-hidden="true">🧖‍♀️</div>
-            <h3>Body Treatments</h3>
-            <p>Scrubs, wraps, and detox rituals designed to smooth, soften, and renew.</p>
-            <a class="link" href="#pricing">View pricing →</a>
+            <h3>Tratamientos Corporales</h3>
+            <p>Ejemplos.</p>
+            <a class="link" href="../Servicios/TratamientosCoporales.html">Ver más →</a>
           </article>
 
           <article class="service">
             <div class="service__icon" aria-hidden="true">💆</div>
-            <h3>Couples Experience</h3>
-            <p>Share a calming session in our couples suite with a choice of massage styles.</p>
-            <a class="link" href="#contact">Book now →</a>
-          </article>
-
-          <article class="service">
-            <div class="service__icon" aria-hidden="true">🕯️</div>
-            <h3>Sauna + Steam</h3>
-            <p>Reset your body and mind with heat therapy and guided breathing.</p>
-            <a class="link" href="#contact">Reserve →</a>
+            <h3>Masajes en Pareja</h3>
+            <p>Disfruten de una relajante sesión para parejas con una selección de estilos de masaje.</p>
+            <a class="link" href="../Servicios/Parejas.html">Ver más →</a>
           </article>
 
           <article class="service">
             <div class="service__icon" aria-hidden="true">🎁</div>
-            <h3>Packages</h3>
-            <p>Best-value bundles combining massage, facial, and body rituals for total renewal.</p>
-            <a class="link" href="#pricing">See packages →</a>
+            <h3>Paquetes</h3>
+            <p>Paquetes con la mejor relación calidad-precio que combinan masajes, tratamientos faciales y rituales corporales para una renovación total.</p>
+            <a class="link" href="../Servicios/Paquetes.html">Ver Paquetes →</a>
           </article>
-        </div>
-      </div>
-    </section>
 
-    <!-- Pricing -->
-    <section id="pricing" class="section section--alt">
-      <div class="container">
-        <div class="section__head">
-          <h2>Pricing</h2>
-          <p class="muted">Transparent pricing. No surprises. Add-ons available during booking.</p>
-        </div>
+         <article class="service">
+            <div class="service__icon" aria-hidden="true">🕯️</div>
+            <h3>Servicios Adiconales</h3>
+            <p>Cuida tu cuerpo con nuestros servicios adicionales.</p>
+            <a class="link" href="../Servicios/ServiciosAdicionales.html">Ver más →</a>
+          </article>
 
-        <div class="grid grid--3">
-          <div class="price card">
-            <h3>Massage</h3>
-            <p class="price__tag">$85 <span>/ 60 min</span></p>
-            <ul class="bullets">
-              <li>Swedish or deep tissue</li>
-              <li>Personalized pressure</li>
-              <li>Optional aromatherapy</li>
-            </ul>
-            <a class="btn btn--block" href="#contact">Book Massage</a>
-          </div>
-
-          <div class="price card price--featured">
-            <div class="badge">Most Popular</div>
-            <h3>Signature Facial</h3>
-            <p class="price__tag">$95 <span>/ 60 min</span></p>
-            <ul class="bullets">
-              <li>Cleanse + exfoliation</li>
-              <li>Mask + hydration</li>
-              <li>Neck &amp; scalp massage</li>
-            </ul>
-            <a class="btn btn--block" href="#contact">Book Facial</a>
-          </div>
-
-          <div class="price card">
-            <h3>Renewal Package</h3>
-            <p class="price__tag">$165 <span>/ 90 min</span></p>
-            <ul class="bullets">
-              <li>45-min massage</li>
-              <li>45-min facial</li>
-              <li>Complimentary tea</li>
-            </ul>
-            <a class="btn btn--block" href="#contact">Book Package</a>
-          </div>
-        </div>
-
-        <div class="note card">
-          <h3>Add-ons</h3>
-          <p class="muted">Upgrade any treatment:</p>
-          <div class="chips" role="list">
-            <span class="chip" role="listitem">Aromatherapy +$10</span>
-            <span class="chip" role="listitem">Hot Stones +$15</span>
-            <span class="chip" role="listitem">CBD Balm +$12</span>
-            <span class="chip" role="listitem">Extra 15 min +$20</span>
-          </div>
         </div>
       </div>
     </section>
@@ -196,183 +144,86 @@
       <div class="container about">
         <div class="about__text">
           <div class="section__head section__head--left">
-            <h2>About Serenity</h2>
+            <h2>Acerca de Life Skin Care</h2>
             <p class="muted">
-              We’re a boutique spa focused on calm, comfort, and evidence-based bodywork.
-              Every session starts with a quick consultation to tailor your experience.
+              Example
             </p>
           </div>
 
           <div class="highlights">
             <div class="highlight">
-              <h3>Licensed Professionals</h3>
-              <p>Certified therapists and estheticians with years of experience.</p>
+              <h3>Cuidado Profesional</h3>
+              <p>Especialistas capacitados y con basta experiencia en el cuidado de tu cuerpo y bienestar.</p>
+              <a class="link" href="../personal/personal.html">Conócenos. →</a>
             </div>
             <div class="highlight">
-              <h3>Clean + Gentle Products</h3>
-              <p>Skin-friendly formulas, free from harsh irritants when possible.</p>
+              <h3>Limpieza + Productos Amigables</h3>
+              <p>Fórmulas respetuosas con la piel, libres de irritantes agresivos siempre que sea posible.</p>
             </div>
             <div class="highlight">
-              <h3>Relaxing Space</h3>
-              <p>Soft lighting, warm tones, and quiet rooms designed to unwind.</p>
+              <h3>Espacios Relajantes</h3>
+              <p>Iluminación suave y habitaciones tranquilas diseñadas para relajarse.</p>
             </div>
           </div>
         </div>
 
         <div class="about__card">
-          <div class="card quote">
-            <p>
-              “My favorite part is how personal the treatments feel. I leave lighter every time.”
-            </p>
-            <span class="muted">— Client review</span>
-          </div>
           <div class="card hours">
-            <h3>Hours</h3>
+            <h3>Horario</h3>
             <ul class="hours__list">
-              <li><span>Mon–Fri</span><span>9:00 AM – 8:00 PM</span></li>
-              <li><span>Sat</span><span>10:00 AM – 7:00 PM</span></li>
-              <li><span>Sun</span><span>10:00 AM – 6:00 PM</span></li>
+              <li><span>Lunes–Viernes</span><span>10:00 AM – 8:00 PM</span></li>
+              <li><span>Sábados</span><span>10:00 AM – 7:00 PM</span></li>
+              <li><span>Domingos</span><span>Cerrado</span></li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="section section--alt">
-      <div class="container">
-        <div class="section__head">
-          <h2>Testimonials</h2>
-          <p class="muted">A few words from clients who found their calm.</p>
-        </div>
-
-        <div class="grid grid--3">
-          <div class="card testimonial">
-            <p>“The deep tissue massage fixed my shoulder tension. Super professional.”</p>
-            <span class="muted">— Alex R.</span>
-          </div>
-          <div class="card testimonial">
-            <p>“Best facial I’ve had in years—my skin felt hydrated and bright.”</p>
-            <span class="muted">— Sam K.</span>
-          </div>
-          <div class="card testimonial">
-            <p>“The atmosphere is peaceful and clean. I booked again before I left.”</p>
-            <span class="muted">— Jordan M.</span>
-          </div>
-        </div>
+<!-- Contact / Appointment -->
+<section id="contact" class="section section--alt">
+  <div class="container contact">
+    <div class="contact__info" style="max-width: 700px; margin: 0 auto;">
+      <div class="section__head section__head--left">
+        <h2>Reserva con nosotros</h2>
+        <p class="muted">
+          Para programar una cita, póngase en contacto con nosotros directamente.
+          Estaremos encantados de ayudarle y confirmar la disponibilidad.
+        </p>
       </div>
-    </section>
 
-    <!-- Gallery -->
-    <section id="gallery" class="section">
-      <div class="container">
-        <div class="section__head">
-          <h2>Gallery</h2>
-          <p class="muted">A calm aesthetic—soft, warm, and welcoming.</p>
+      <div class="card contact__card">
+        <div class="contact__line">
+          <strong>Email:</strong>
+          <a href="mailto:lifeskincareirapuato@outlook.com">
+            lifeskincareirapuato@outlook.com
+          </a>
         </div>
 
-        <div class="gallery">
-          <div class="gallery__item" aria-label="Zen stones image placeholder">
-            <span>Zen Stones</span>
-          </div>
-          <div class="gallery__item" aria-label="Treatment room image placeholder">
-            <span>Treatment Room</span>
-          </div>
-          <div class="gallery__item" aria-label="Essential oils image placeholder">
-            <span>Essential Oils</span>
-          </div>
-          <div class="gallery__item" aria-label="Facial products image placeholder">
-            <span>Skincare</span>
-          </div>
+        <div class="contact__line">
+          <strong>WhatsApp:</strong>
+          <a href="https://wa.me/524661059586" target="_blank" rel="noopener">
+            +52 462 105 9586
+          </a>
         </div>
+
+        <div class="divider"></div>
+
+        <p class="muted small">
+          Por favor, incluya el servicio, la fecha y la hora que prefiere al ponerse en contacto con nosotros.
+        </p>
       </div>
-    </section>
-
-    <!-- Contact / Booking -->
-    <section id="contact" class="section section--alt">
-      <div class="container contact">
-        <div class="contact__info">
-          <div class="section__head section__head--left">
-            <h2>Book a Visit</h2>
-            <p class="muted">
-              Tell us what you want to book and your preferred date/time. We’ll confirm by email or phone.
-            </p>
-          </div>
-
-          <div class="card contact__card">
-            <div class="contact__line"><strong>Phone:</strong> (555) 123-4567</div>
-            <div class="contact__line"><strong>Email:</strong> hello@serenityspa.com</div>
-            <div class="contact__line"><strong>Address:</strong> 123 Calm Street, Your City</div>
-            <div class="divider"></div>
-            <p class="muted small">
-              Tip: Add special requests (pressure preference, allergies, skin concerns) in the message box.
-            </p>
-          </div>
-        </div>
-
-        <form class="card form" action="#" method="post">
-          <div class="form__row">
-            <label>
-              Full Name
-              <input type="text" name="name" placeholder="Your name" required />
-            </label>
-            <label>
-              Phone
-              <input type="tel" name="phone" placeholder="(555) 000-0000" required />
-            </label>
-          </div>
-
-          <div class="form__row">
-            <label>
-              Email
-              <input type="email" name="email" placeholder="you@example.com" required />
-            </label>
-            <label>
-              Service
-              <select name="service" required>
-                <option value="" selected disabled>Select a service</option>
-                <option>Massage Therapy</option>
-                <option>Signature Facial</option>
-                <option>Body Treatment</option>
-                <option>Couples Experience</option>
-                <option>Renewal Package</option>
-              </select>
-            </label>
-          </div>
-
-          <div class="form__row">
-            <label>
-              Preferred Date
-              <input type="date" name="date" required />
-            </label>
-            <label>
-              Preferred Time
-              <input type="time" name="time" required />
-            </label>
-          </div>
-
-          <label>
-            Notes
-            <textarea name="notes" rows="4" placeholder="Any preferences or requests?"></textarea>
-          </label>
-
-          <button class="btn btn--block" type="submit">Request Booking</button>
-          <p class="muted small" style="margin-top:10px;">
-            This demo form does not send emails yet. If you want, I can connect it to PHP or Python (Flask) and store bookings in SQL.
-          </p>
-        </form>
-      </div>
-    </section>
-  </main>
+    </div>
+  </div>
+</section>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="container footer__inner">
-      <p>© <span id="year"></span> Life Skin Care. All rights reserved.</p>
+      <p>© <span id="year"></span> Life Skin Care Irapuato. All rights reserved.</p>
       <div class="footer__links">
-        <a href="#services">Services</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#contact">Book</a>
+        <a href="#services">Servicios</a>
+        <a href="#contact">Reserva</a>
       </div>
     </div>
   </footer>
@@ -380,7 +231,5 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
-
-
-
+</body>
 </html>
