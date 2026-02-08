@@ -2,25 +2,26 @@
 :root{
   /* Brand */
   --primary: #51a8b1; /* teal */
-  --accent:  #a9cf46; /* green */
-  --dark:    #223f3d; /* deep */
+  --accent:  #a9cf45; /* green */
+  --dark:    #204d48; /* deep green */
 
-  /* AMOLED-optimized base (near-true black, but slightly lifted to avoid banding) */
-  --bg: #070a0a;         /* very dark, AMOLED friendly */
-  --bg2:#0b1010;         /* secondary background */
-  --surface: rgba(255,255,255,0.06);  /* cards */
-  --surface2: rgba(255,255,255,0.09); /* elevated cards */
-  --line: rgba(255,255,255,0.16);     /* clearer separators */
+  /* Light base */
+  --bg:  #eef5f4;     /* fondo principal */
+  --bg2: #e4efed;     /* fondo secundario */
+  --surface: #ffffff; 
+  --surface2: #f6fbfa;
 
-  /* WCAG-focused text */
-  --text: rgba(255,255,255,0.96);     /* near-white */
-  --muted: rgba(255,255,255,0.78);    /* readable muted (avoid too faint) */
-  --muted2: rgba(255,255,255,0.66);   /* secondary muted */
+  --line: rgba(32,77,72,0.18);
 
-  /* Focus + glow tuned for OLED (less bloom) */
-  --focus-ring: rgba(81,168,177,0.28);
+  /* Text (WCAG AA/AAA) */
+  --text:  #1f2f2d;   /* texto principal */
+  --muted: #4a6461;   /* texto secundario */
+  --muted2:#6f8a86;
 
-  --shadow: 0 18px 42px rgba(0,0,0,0.55);
+  /* Focus */
+  --focus-ring: rgba(81,168,177,0.35);
+
+  --shadow: 0 14px 36px rgba(32,77,72,0.12);
   --radius: 18px;
   --radius2: 24px;
   --max: 1100px;
@@ -34,8 +35,8 @@ body{
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", sans-serif;
   color: var(--text);
   background:
-    radial-gradient(900px 700px at 18% 0%, rgba(81,168,177,0.18), transparent 62%),
-    radial-gradient(700px 600px at 92% 8%, rgba(169,207,70,0.12), transparent 60%),
+    radial-gradient(900px 700px at 15% 0%, rgba(81,168,177,0.14), transparent 60%),
+    radial-gradient(700px 600px at 90% 10%, rgba(169,207,69,0.14), transparent 60%),
     linear-gradient(180deg, var(--bg2), var(--bg) 70%);
   line-height: 1.55;
 }
@@ -54,7 +55,7 @@ img{ max-width:100%; display:block; }
 }
 
 .section--alt{
-  background: rgba(255,255,255,0.03);
+  background: var(--surface2);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
@@ -79,7 +80,7 @@ img{ max-width:100%; display:block; }
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(7,17,15,0.72);
+  background: rgba(238,245,244,0.85);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--line);
 }
@@ -216,11 +217,12 @@ img{ max-width:100%; display:block; }
 
 /* -------- Components -------- */
 .card{
-  background: linear-gradient(180deg, var(--surface2), var(--surface));
+  background: linear-gradient(180deg, var(--surface), var(--surface2));
   border: 1px solid var(--line);
   border-radius: var(--radius2);
   box-shadow: var(--shadow);
 }
+
 
 .divider{
   height: 1px;
@@ -229,35 +231,32 @@ img{ max-width:100%; display:block; }
 }
 
 .btn{
- display:inline-flex;
+  display:inline-flex;
   align-items:center;
   justify-content:center;
   gap: 10px;
   padding: 12px 16px;
   border-radius: 14px;
 
-  /* Higher contrast border on dark */
   border: 1px solid rgba(81,168,177,0.55);
-
-  /* Reduce bloom by limiting bright areas */
   background: linear-gradient(
     135deg,
-    rgba(81,168,177,0.30),
-    rgba(169,207,70,0.18)
+    #51a8b1,
+    #7fc4a3
   );
 
-  color: var(--text);
+  color: #ffffff;
   font-weight: 800;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.55);
+  box-shadow: 0 10px 24px rgba(32,77,72,0.22);
   transition: transform 0.12s ease, filter 0.12s ease;
 }
+
 .btn:hover{ transform: translateY(-1px); filter: brightness(1.05); }
 .btn:active{ transform: translateY(0px); filter: brightness(0.98); }
 .btn--ghost{
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.18);
-  box-shadow: none;
-  color: var(--text);
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--dark);
 }
 .btn--sm{
   padding: 10px 12px;
@@ -454,14 +453,17 @@ img{ max-width:100%; display:block; }
   color: rgba(255,255,255,0.90);
   margin-bottom: 12px;
 }
-.form input, .form select, .form textarea{
-  border: 1px solid rgba(255,255,255,0.18);
-  background: rgba(0,0,0,0.35); /* darker for OLED + contrast */
+.form input,
+.form select,
+.form textarea{
+  border: 1px solid var(--line);
+  background: #ffffff;
   color: var(--text);
 }
+
 .form input::placeholder,
 .form textarea::placeholder{
-  color: rgba(255,255,255,0.55); /* readable placeholder */
+  color: var(--muted2);
 }
 
 .form input:focus, .form select:focus, .form textarea:focus{
@@ -479,8 +481,9 @@ img{ max-width:100%; display:block; }
 .footer{
   padding: 28px 0;
   border-top: 1px solid var(--line);
-  background: rgba(0,0,0,0.22);
+  background: var(--bg2);
 }
+
 .footer__inner{
   display:flex;
   align-items:center;
@@ -494,6 +497,78 @@ img{ max-width:100%; display:block; }
   color: var(--muted);
 }
 .footer__links a:hover{ color: var(--text); }
+
+/* ===== Carousel ===== */
+.carousel {
+  position: relative;
+  max-width: 900px;
+  margin: 3rem auto 0;
+  border-radius: var(--radius2);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.carousel__track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel__slide {
+  min-width: 100%;
+}
+
+.carousel__slide img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Buttons */
+.carousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.45);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  padding: 0.3em 0.6em;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.carousel__btn:hover {
+  background: rgba(0,0,0,0.65);
+}
+
+.carousel__btn.prev { left: 12px; }
+.carousel__btn.next { right: 12px; }
+
+/* Dots */
+.carousel__dots {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.carousel__dots .dot {
+  width: 10px;
+  height: 10px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.carousel__dots .dot.active {
+  background: #a9cf46; /* color principal */
+}
+
 
 /* -------- Responsive -------- */
 @media (max-width: 950px){
