@@ -14,6 +14,46 @@
   <link rel="stylesheet" href="../static/styles.css" />
 </head>
 
+<script>
+  const track = document.querySelector('.carousel__track');
+  const slides = Array.from(document.querySelectorAll('.carousel__slide'));
+  const nextBtn = document.querySelector('.carousel__btn.next');
+  const prevBtn = document.querySelector('.carousel__btn.prev');
+  const dots = document.querySelectorAll('.dot');
+
+  let index = 0;
+
+  function updateCarousel() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[index].classList.add('active');
+  }
+
+  nextBtn.addEventListener('click', () => {
+    index = (index + 1) % slides.length;
+    updateCarousel();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    index = (index - 1 + slides.length) % slides.length;
+    updateCarousel();
+  });
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      index = i;
+      updateCarousel();
+    });
+  });
+
+  // Auto-play
+  setInterval(() => {
+    index = (index + 1) % slides.length;
+    updateCarousel();
+  }, 5000);
+</script>
+
+
 <body>
   <!-- Top Bar -->
   <header class="topbar">
@@ -40,6 +80,31 @@
           <p class="lead">
            Masajes terapéuticos, tratamientos faciales, tratamientos corporales y paquetes de spa diseñados para ayudarte a relajarte y sentirte de maravilla.
           </p>
+
+          <!-- Image Carousel -->
+<div class="carousel" aria-label="Galería de imágenes del spa">
+  <div class="carousel__track">
+    <div class="carousel__slide active">
+      <img src="./images/Ayurveda.jpg" alt="Área de masajes relajantes">
+    </div>
+    <div class="carousel__slide">
+      <img src="./images/Depilacion.jpg" alt="Cabina de tratamientos faciales">
+    </div>
+    <div class="carousel__slide">
+      <img src="./images/Masajes.jpg" alt="Espacio de relajación del spa">
+    </div>
+  </div>
+
+  <button class="carousel__btn prev" aria-label="Imagen anterior">‹</button>
+  <button class="carousel__btn next" aria-label="Imagen siguiente">›</button>
+
+  <div class="carousel__dots">
+    <button class="dot active"></button>
+    <button class="dot"></button>
+    <button class="dot"></button>
+  </div>
+</div>
+<br>
 
           <div class="hero__actions">
             <a class="btn" href="#contact">Reserva con nosotros</a>
@@ -72,7 +137,7 @@
               <li>Example</li>
             </ul>
             <div class="divider"></div>
-            <p class="muted">
+            <p class="muted"> 
               Horarios:<br>
                Lunes–Viernes • 10:00 AM – 8:00 PM<br />
               Sábados • 10:00 AM - 6:00 PM<br>
@@ -94,42 +159,56 @@
 
         <div class="grid grid--3">
           <article class="service">
-            <div class="service__icon" aria-hidden="true">🌿</div>
+            <div class="service__icon" aria-hidden="true"></div>
             <h3>Masajes</h3>
             <p>Examples.</p>
             <a class="link" href="../Servicios/Masajes.html">Ver más →</a>
           </article>
 
           <article class="service">
-            <div class="service__icon" aria-hidden="true">✨</div>
+            <div class="service__icon" aria-hidden="true"></div>
+            <h3>Corporales</h3>
+            <p>Ejemplos.</p>
+            <a class="link" href="../Servicios/Corporales.html">Ver más →</a>
+          </article>
+
+          <article class="service">
+            <div class="service__icon" aria-hidden="true"></div>
             <h3>Faciales</h3>
             <p>Ejemplos.</p>
             <a class="link" href="../Servicios/Faciales.html">Ver más →</a>
           </article>
 
           <article class="service">
-            <div class="service__icon" aria-hidden="true">🧖‍♀️</div>
-            <h3>Tratamientos Corporales</h3>
+            <div class="service__icon" aria-hidden="true"></div>
+            <h3>Depilación E-Light</h3>
             <p>Ejemplos.</p>
-            <a class="link" href="../Servicios/TratamientosCoporales.html">Ver más →</a>
+            <a class="link" href="../Servicios/Depilación.html">Ver más →</a>
           </article>
 
           <article class="service">
-            <div class="service__icon" aria-hidden="true">💆</div>
-            <h3>Masajes en Pareja</h3>
+            <div class="service__icon" aria-hidden="true"></div>
+            <h3>Aparatología</h3>
             <p>Disfruten de una relajante sesión para parejas con una selección de estilos de masaje.</p>
-            <a class="link" href="../Servicios/Parejas.html">Ver más →</a>
+            <a class="link" href="../Servicios/Aparatos.html">Ver más →</a>
           </article>
 
           <article class="service">
-            <div class="service__icon" aria-hidden="true">🎁</div>
+            <div class="service__icon" aria-hidden="true"></div>
             <h3>Paquetes</h3>
             <p>Paquetes con la mejor relación calidad-precio que combinan masajes, tratamientos faciales y rituales corporales para una renovación total.</p>
             <a class="link" href="../Servicios/Paquetes.html">Ver Paquetes →</a>
           </article>
+          
+          <article class="service">
+            <div class="service__icon" aria-hidden="true"></div>
+            <h3>Cursos</h3>
+            <p>Disfruten de una relajante sesión para parejas con una selección de estilos de masaje.</p>
+            <a class="link" href="../Servicios/Cursos.html">Ver más →</a>
+          </article>
 
          <article class="service">
-            <div class="service__icon" aria-hidden="true">🕯️</div>
+            <div class="service__icon" aria-hidden="true"></div>
             <h3>Servicios Adiconales</h3>
             <p>Cuida tu cuerpo con nuestros servicios adicionales.</p>
             <a class="link" href="../Servicios/ServiciosAdicionales.html">Ver más →</a>
@@ -146,7 +225,7 @@
           <div class="section__head section__head--left">
             <h2>Acerca de Life Skin Care</h2>
             <p class="muted">
-              Example
+              Somos un grupo de profesionistas en diversas áreas que nos preocupamos por cuidar a nuestros pacientes en cada una de nuestras áreas brindando servicio y profesionalismo para su bienestar.
             </p>
           </div>
 
@@ -233,5 +312,3 @@
   </script>
 </body>
 </html>
-
-
